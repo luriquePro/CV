@@ -4,6 +4,11 @@ import { CourseDuration } from "../cv/courses/CourseDuration";
 import { CourseInstitution } from "../cv/courses/CourseInstitution";
 import { CourseTitle } from "../cv/courses/CourseTitle";
 
+import moment from "moment";
+import "moment/locale/pt-br";
+
+moment.locale("pt-br");
+
 interface CourseModalProps extends ICourse {
 	statusColors: string;
 	statusLabels: string;
@@ -61,12 +66,16 @@ const CourseModal = ({
 					{isCompletedCourse ? (
 						<div className="flex items-center gap-2 text-sm text-gray-600">
 							<Calendar className="w-4 h-4" />
-							<span>Concluído em {new Date(completionDate!).toLocaleDateString("pt-BR")}</span>
+							<span>
+								Concluído em <strong>{moment(completionDate!, "YYYY-MM").format("MMM yyyy")}</strong>
+							</span>
 						</div>
 					) : (
 						<div className="flex items-center gap-2 text-sm text-gray-600">
 							<Calendar className="w-4 h-4" />
-							<span>Previsão: {new Date(expectedCompletionDate!).toLocaleDateString("pt-BR")}</span>
+							<span>
+								Previsão: <strong>{moment(expectedCompletionDate!, "YYYY-MM").format("MMM yyyy")}</strong>
+							</span>
 						</div>
 					)}
 

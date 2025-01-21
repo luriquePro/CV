@@ -40,7 +40,7 @@ export interface ICourse {
 	title: string;
 	description: string;
 	status: CourseStatus;
-	platform: string;
+	platform?: string;
 	institution: string;
 	certificateUrl?: string;
 	completionDate?: string;
