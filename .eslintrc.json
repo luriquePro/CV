@@ -1,0 +1,47 @@
+{
+	"ignores": ["dist", "node_modules"],
+	"extends": [
+		"prettier",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript",
+		"plugin:prettier/recommended",
+		"next/core-web-vitals"
+	],
+	"env": {
+		"browser": true,
+		"node": true,
+		"es2020": true
+	},
+	"rules": {
+		"react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+		"no-var": "error",
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"],
+		"import/order": [
+			"warn",
+			{
+				"alphabetize": { "order": "asc", "caseInsensitive": true },
+				"newlines-between": "always"
+			}
+		],
+		"sort-imports": [
+			"warn",
+			{
+				"ignoreCase": true,
+				"ignoreDeclarationSort": true,
+				"ignoreMemberSort": false,
+				"memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+			}
+		],
+		"no-multi-spaces": "error",
+		"space-in-parens": "error",
+		"no-multiple-empty-lines": "error",
+		"prefer-const": "error",
+		"@typescript-eslint/no-unused-vars": "error",
+		"@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+		"prettier/prettier": "error"
+	}
+}
