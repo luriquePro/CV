@@ -1,11 +1,11 @@
 "use client";
 
-import { AboutSection } from "@/components/app/AboutSection";
-import { CoursesSection } from "@/components/app/CoursesSection";
-import { EducationSection } from "@/components/app/EducationSection";
-import { ExperienceSection } from "@/components/app/ExperienceSection";
-import { HeaderCV } from "@/components/app/Header";
-import { SkillsSections } from "@/components/app/SkillsSections";
+import { AboutSection } from "@/app/components/app/AboutSection";
+import { CoursesSection } from "@/app/components/app/CoursesSection";
+import { EducationSection } from "@/app/components/app/EducationSection";
+import { ExperienceSection } from "@/app/components/app/ExperienceSection";
+import { HeaderCV } from "@/app/components/app/Header";
+import { SkillsSections } from "@/app/components/app/SkillsSections";
 import { Download } from "lucide-react";
 import { useRef } from "react";
 
@@ -13,8 +13,8 @@ export default function Home() {
 	const resumeRef = useRef<HTMLDivElement>(null);
 
 	return (
-		<div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
-			<main ref={resumeRef} className="max-w-[790px] mx-auto bg-white rounded-lg overflow-hidden shadow-xl shadow-gray-400">
+		<div className="min-h-screen bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
+			<main ref={resumeRef} className="max-w-[790px] mx-auto !bg-gray-50 rounded-lg overflow-hidden shadow-xl shadow-gray-400">
 				{/* Container */}
 				<div className="px-6 sm:p-8">
 					{/* Header Section */}

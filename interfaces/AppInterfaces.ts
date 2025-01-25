@@ -1,4 +1,4 @@
-import { ISkill } from "@/components/app/Skill";
+import { ISkill } from "@/app/components/app/Skill";
 import { LucideProps } from "lucide-react";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 

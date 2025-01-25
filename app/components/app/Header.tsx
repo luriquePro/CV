@@ -10,8 +10,8 @@ interface HeaderProps {
 
 const HeaderCV = ({ name, position }: HeaderProps) => {
 	return (
-		<header className="text-center mb-8">
-			<div className="flex justify-center items-center space-x-8 my-6 p-4 shadow-sm shadow-gray-400">
+		<header className="text-center mb-8 bg-white shadow-sm shadow-gray-400">
+			<div className="flex justify-center items-center space-x-8 my-6 p-4">
 				<div className="w-16 lg:w-24 h-16 lg:h-24 rounded-full">
 					<Image src="/profile.jpg" alt="Profile Picture" width={96} height={96} className="w-full h-full object-cover rounded-full" />
 				</div>
